@@ -1,28 +1,32 @@
-// how to select a html tag in js:
-/* With css we would:
-h1{
-color: red;}
+//mission get both buttons to work.
 
-*/
-//as above in js
-document.querySelector("h1").style = "color: red;";
-function something() {
-  document.querySelector("h1").style = "color: green;";
-  console.log("HEIHEI");
-  //1 use the keyword function to declare a function
-  //2 followed by a name of ur choice
-  //3follwed by ()
-  //4followed by {}
-  //5function specific code goes inside the {}
+//I.handle the green color button:
+
+//1. grab the button element with queryselcetor.
+let buttonElementGreen = document.querySelector("#button-green");
+//2. to see if it worked we can then console it.
+console.log(buttonElementGreen);
+//3.Try to use addeventlistener...
+function makeitgreen() {
+  //function shall change the color of the h1 element to green
+  //1. grab h1 elemnt:
+  let h1Element = document.querySelector("h1");
+  //console.log(h1Element);
+  h1Element.style = "color: green;";
 }
-//make h1 green w button
-/*document.querySelector("button").addEventListener("click", function()){
-console.log("hi")
-}*/
+buttonElementGreen.addEventListener("click", makeitgreen);
 
-let buttonElement = document.querySelector("button");
-//gå inni buttonelement
-//legg til event-listener
-//parameter 1: type of event , in our case "click
-// //parameter 2: proive some funtion to run"
-buttonElement.addEventListener("click", something);
+let buttonElementRed = document.querySelector("#button-red");
+//2. to see if it worked we can then console it.
+console.log(buttonElementRed);
+//3.Try to use addeventlistener...
+function makeitred() {
+  //function shall change the color of the h1 element to green
+  //1. grab h1 elemnt:
+  let h1Element = document.querySelector("h1");
+  //console.log(h1Element);
+  h1Element.style = "color: red;";
+}
+buttonElementRed.addEventListener("click", makeitred);
+
+//II.handle the red color button:

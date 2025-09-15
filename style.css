@@ -6,6 +6,11 @@ body {
   color: aqua;
 }
 
-#button {
-  background-color: blue;
+#button-red {
+  background-color: red;
+  color: pink;
+}
+#button-green {
+  background-color: green;
+  color: black;
 }
