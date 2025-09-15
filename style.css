@@ -14,3 +14,26 @@ body {
   background-color: green;
   color: black;
 }
+#button-black {
+  background-color: black;
+  color: white;
+}
+#button-pink {
+  background-color: pink;
+  color: black;
+}
+#button-brown {
+  background-color: brown;
+  color: white;
+}
+#button-revert {
+  background-color: wheat;
+  color: black;
+}
+#buttonbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px;
+  flex-grow: 10px;
+}
