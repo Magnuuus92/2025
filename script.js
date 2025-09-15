@@ -1,21 +1,28 @@
-//Dette er en kodekommentar
-//bruke consol.log metoden for å skrive ut meldingen hei.
+// how to select a html tag in js:
+/* With css we would:
+h1{
+color: red;}
 
-console.log("hei");
+*/
+//as above in js
+document.querySelector("h1").style = "color: red;";
+function something() {
+  document.querySelector("h1").style = "color: green;";
+  console.log("HEIHEI");
+  //1 use the keyword function to declare a function
+  //2 followed by a name of ur choice
+  //3follwed by ()
+  //4followed by {}
+  //5function specific code goes inside the {}
+}
+//make h1 green w button
+/*document.querySelector("button").addEventListener("click", function()){
+console.log("hi")
+}*/
 
-//flere linjer med
-// kommentar
-// en text i kodespråk er en "string"
-
-console.log("hallo, hva heter du");
-
-console.log();
-let greeting = "Heisann";
-//lage variabel
-//1. let 2.navn på variabel 3.assignment operator:(=)
-//4. set verdi bak = til noe
-let number1 = 2;
-let number2 = 5.25;
-console.log(number1 + number2);
-let minkonsoll = console.log;
-minkonsoll("hallo");
+let buttonElement = document.querySelector("button");
+//gå inni buttonelement
+//legg til event-listener
+//parameter 1: type of event , in our case "click
+// //parameter 2: proive some funtion to run"
+buttonElement.addEventListener("click", something);
