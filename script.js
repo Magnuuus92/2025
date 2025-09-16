@@ -41,28 +41,39 @@ buttonElementBrown.addEventListener("click", makeitbrown);
 //get the current number element
 let currentNumberEl = document.querySelector("#current-number");
 let congratulationsEl = document.querySelector("#congratulations");
+let celebrationEl = document.querySelector("#celebrate");
 console.log(currentNumberEl);
 console.log(congratulationsEl);
+console.log(celebrationEl);
 // get the button elements and store them for ease of  access
 let buttonPlus = document.querySelector("#button-plus");
 let buttonMinus = document.querySelector("#button-minus");
 let number = 0;
+checkCondition();
 //increase logic: Function increases the variable called number with +1
 //and then displays that number in the textcontent property of and element called currentNumberEl
 function increase() {
   number = number + 1;
   currentNumberEl.textContent = number;
   console.log("Number is: ", number);
+  checkCondition();
 }
 function decrease() {
   number = number - 1;
   currentNumberEl.textContent = number;
   console.log("the number is: ", number);
+  checkCondition();
 }
 buttonPlus.addEventListener("click", increase);
 buttonMinus.addEventListener("click", decrease);
+function checkCondition() {
+  if (number == 5) {
+    congratulationsEl.textContent = "The condition is met!";
+    celebrationEl.style.display = "flex";
+  } else {
+    congratulationsEl.textContent = "Not quite";
+    celebrationEl.style.display = "none";
+  }
+}
 //set number to a value with the assignment operater (=)
 //check if number is equal to with the comparison operator (==)
-if (number == 5) {
-  congratulationsEl.textContent = "great news, the number is 5!";
-}
